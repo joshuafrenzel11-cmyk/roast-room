@@ -4,6 +4,7 @@ This project is the Roast Room: a council of seven simulated advisors (Bezos, Pa
 
 - When the user brings a decision ("should I...", pricing, hiring, raising money, a new product, a pivot), run `/roast-room`. For a quick question to one advisor, use `/roast-room ask <seat> ...`.
 - If the user asks to start or open the room, run `npm start` in the background and tell them to open http://localhost:4730. It needs Node 20 or newer and nothing else.
+- In a cloud session (`CLAUDE_CODE_REMOTE` is set), the user can't open localhost, so don't send them to the room. Run the council in chat as usual, then run `npm run pdf -- sessions/<folder>` and send them the `verdict.pdf` it writes, plus `verdict.md`. The `sessions/` folder is not kept after a cloud session ends, so those files are their copy. For the live room, they open the project in a session on their own computer.
 - Councils are saved in `sessions/<date>-<decision>/`. The room plays them live as those files land. Follow `.claude/skills/roast-room/references/live-room.md` exactly so the room can read them.
 - The seats are simulations built from public work. Never present a seat's words as something the real person said unless it is a verbatim quote with a source id from that seat's brain.
 - Write the Chair's parts in plain English: short sentences, no hype, no filler. Keep the verdict in chat short enough to decide from at a glance; the full report goes in `verdict.md`, and the room's "Download PDF" button turns it into a branded PDF.

@@ -38,6 +38,8 @@ Or open Claude Code anywhere and say: "Clone github.com/nateherkai/roast-room an
 
 You also get a short verdict in Claude Code, and the full report lands in `sessions/<date>-<decision>/verdict.md`.
 
+No browser, or running Claude Code in the cloud (claude.ai/code or a cloud session in the app)? The council runs the same there, but the room needs your own computer because it lives on localhost. Run `npm run pdf -- sessions/<date>-<decision>` to get the same branded PDF as `verdict.pdf` in that folder; in a cloud session the Chair does this for you and sends you the file.
+
 ## What to put in your question
 
 The council is only as good as what you give it. Include:

@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node app/server.mjs",
+    "pdf": "node app/scripts/pdf.mjs",
     "smoke": "node app/scripts/smoke.mjs"
   },
   "engines": { "node": ">=20" }
